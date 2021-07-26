@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const galleryList = document.querySelector('#gallery');
+
+galleryList.classList.add("foto-gallery");
+
+const createEl = (acc, {url, alt}) => acc + `<li>
+<img src="${url}" alt=${alt}" width="400">
+</li>`;
+
+const murkUp = images.reduce(createEl, '');
+galleryList.insertAdjacentHTML('beforeend', murkUp);
+

@@ -1,0 +1,9 @@
+.foto-gallery {
+    display: flex;
+    list-style: none;
+}
+
+li:not(:last-child) {
+    margin-right: 30px;
+}
+
